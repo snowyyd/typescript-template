@@ -11,17 +11,15 @@
 	"author": "snowyyd <snowyyd@proton.me>",
 	"license": "MIT",
 	"scripts": {
-		"lint": "eslint src/",
-		"build": "tsc",
-		"dev": "tsx src/main.ts"
+		"lint": "eslint src/ eslint.config.mjs",
+		"build": "tsc -p tsconfig.build.json",
+		"dev": "tsx src/main.ts",
+		"dev:node": "node src/main.ts"
 	},
 	"devDependencies": {
-		"@snowyyd/eslint-config": "^1.2.1",
+		"@snowyyd/eslint-config": "^2.0.0",
 		"@types/node": "^24.0.1",
 		"eslint": "^9.29.0",
-		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-import-resolver-typescript": "^4.4.3",
-		"eslint-plugin-import": "^2.31.0",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.34.0"

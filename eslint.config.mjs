@@ -1,18 +1,17 @@
-import configX from '@snowyyd/eslint-config/esm';
+// @ts-check
+
+/* eslint-disable import-x/no-extraneous-dependencies */
+import { configs } from '@snowyyd/eslint-config';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-	...configX,
-	...tseslint.configs.recommendedTypeChecked,
-	...tseslint.configs.stylisticTypeChecked,
+	configs.recommended,
+	configs.esm,
 	{
 		ignores: ['dist/**'],
 		languageOptions: {
 			parserOptions: {
-				projectService: {
-					// add other config files below (e.g.: tsup.config.ts)
-					allowDefaultProject: ['eslint.config.mjs'],
-				},
+				projectService: true,
 				tsconfigRootDir: import.meta.dirname,
 			},
 		},
