@@ -17,11 +17,11 @@
 		"dev:node": "node src/main.ts"
 	},
 	"devDependencies": {
-		"@snowyyd/eslint-config": "^2.0.0",
-		"@types/node": "^24.0.1",
-		"eslint": "^9.29.0",
+		"@snowyyd/eslint-config": "^2.2.0",
+		"@types/node": "^24.0.10",
+		"eslint": "^9.30.1",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.34.0"
+		"typescript-eslint": "^8.36.0"
 	}
 }
