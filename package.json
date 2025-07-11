@@ -4,11 +4,9 @@
 	"version": "1.0.0",
 	"private": true,
 	"type": "module",
-	"main": "dist/main.js",
 	"homepage": "https://github.com/snowyyd/typescript-template#readme",
 	"repository": "https://github.com/snowyyd/typescript-template.git",
 	"bugs": "https://github.com/snowyyd/typescript-template/issues",
-	"author": "snowyyd <snowyyd@proton.me>",
 	"license": "MIT",
 	"scripts": {
 		"lint": "eslint src/ eslint.config.mjs",
