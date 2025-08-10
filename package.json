@@ -15,9 +15,9 @@
 		"dev:node": "node src/main.ts"
 	},
 	"devDependencies": {
-		"@snowyyd/eslint-config": "^2.2.3",
-		"@types/node": "^24.2.0",
-		"eslint": "^9.32.0",
+		"@snowyyd/eslint-config": "^2.2.4",
+		"@types/node": "^24.2.1",
+		"eslint": "^9.33.0",
 		"tsx": "^4.20.3",
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.39.0"
