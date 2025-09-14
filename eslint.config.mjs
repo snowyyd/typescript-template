@@ -2,9 +2,9 @@
 
 /* eslint-disable import-x/no-extraneous-dependencies */
 import { configs } from '@snowyyd/eslint-config';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+export default defineConfig(
 	configs.recommended,
 	configs.esm,
 	{
