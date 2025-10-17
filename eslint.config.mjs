@@ -2,13 +2,15 @@
 
 /* eslint-disable import-x/no-extraneous-dependencies */
 import { configs } from '@snowyyd/eslint-config';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig(
+	globalIgnores([
+		'dist/*',
+	]),
 	configs.recommended,
 	configs.esm,
 	{
-		ignores: ['dist/**'],
 		languageOptions: {
 			parserOptions: {
 				projectService: true,
