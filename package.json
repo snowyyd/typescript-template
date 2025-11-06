@@ -10,16 +10,17 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src/ eslint.config.mjs",
+    "check": "tsc",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsx src/main.ts",
     "dev:node": "node src/main.ts"
   },
   "devDependencies": {
     "@snowyyd/eslint-config": "^2.2.5",
-    "@types/node": "^24.9.2",
-    "eslint": "^9.38.0",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
+    "typescript-eslint": "^8.46.3"
   }
 }
