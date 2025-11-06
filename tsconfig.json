@@ -1,40 +1,10 @@
+// See https://bun.com/docs/typescript#suggested-compileroptions
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "include": ["src", "tests", "eslint.config.mjs"],
+  "extends": "./tsconfig.node.json",
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    "outDir": "./dist",
+    "module": "preserve",
+    "moduleResolution": "bundler",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig_modules
-    "target": "esnext",
-    "module": "nodenext",
-    "moduleDetection": "force",
-    "types": ["node"],
-
-    // Modules
-    "noUncheckedSideEffectImports": true,
-    "rewriteRelativeImportExtensions": true,
-    "resolveJsonModule": true,
-    "checkJs": true,
-
-    // Emit
-    "noEmit": true,
-
-    // Interop Constraints
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-
-    // Stricter Typechecking Options
-    "strict": true,
-    "exactOptionalPropertyTypes": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-
-    // Completeness
-    "skipLibCheck": true
+    // All missing options are already defined in tsconfig.node.json
   }
 }
