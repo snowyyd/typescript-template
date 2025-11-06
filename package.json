@@ -12,15 +12,19 @@
     "lint": "eslint src/ eslint.config.mjs",
     "check": "tsc",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsx src/main.ts",
+    "dev": "bun src/main.ts",
     "dev:node": "node src/main.ts"
   },
   "devDependencies": {
     "@snowyyd/eslint-config": "^2.2.6",
+    "@types/bun": "^1.3.8",
     "@types/node": "^25.2.0",
     "eslint": "^9.39.2",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
-  }
+  },
+  "trustedDependencies": [
+    "esbuild",
+    "unrs-resolver"
+  ]
 }

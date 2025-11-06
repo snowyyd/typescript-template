@@ -18,4 +18,17 @@ export default defineConfig(
 			},
 		},
 	},
+	{
+		files: ['**/*.ts'],
+		rules: {
+			'import-x/no-unresolved': [
+				'error',
+				{
+					ignore: ['^bun(:\\w+)?$'],
+					commonjs: true,
+					caseSensitive: true,
+				},
+			],
+		},
+	},
 );
