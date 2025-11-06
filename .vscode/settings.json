@@ -1,3 +1,7 @@
 {
-	"js/ts.tsdk.path": "node_modules/typescript/lib"
+	"js/ts.tsdk.path": "node_modules/typescript/lib",
+	"eslint.runtime": "bun",
+	"eslint.execArgv": [
+		"--bun"
+	],
 }

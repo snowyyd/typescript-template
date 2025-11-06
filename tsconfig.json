@@ -1,5 +1,6 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
+  // https://bun.com/docs/typescript#suggested-compileroptions
   "$schema": "https://json.schemastore.org/tsconfig",
   "include": ["src", "tests", "eslint.config.mjs"],
   "compilerOptions": {
@@ -9,9 +10,10 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig_modules
     "target": "esnext",
-    "module": "nodenext",
+    "module": "preserve",
     "moduleDetection": "force",
-    "types": ["node"],
+    "moduleResolution": "bundler",
+    "types": ["bun"],
 
     // Modules
     "rewriteRelativeImportExtensions": true,
