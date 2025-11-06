@@ -1,0 +1,40 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["src", "tests", "eslint.config.mjs"],
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig_modules
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleDetection": "force",
+    "types": ["node"],
+
+    // Modules
+    "noUncheckedSideEffectImports": true,
+    "rewriteRelativeImportExtensions": true,
+    "resolveJsonModule": true,
+    "checkJs": true,
+
+    // Emit
+    "noEmit": true,
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    // Stricter Typechecking Options
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Completeness
+    "skipLibCheck": true
+  }
+}
