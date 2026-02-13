@@ -9,18 +9,20 @@
   "bugs": "https://github.com/snowyyd/typescript-template/issues",
   "license": "MIT",
   "scripts": {
+    "test": "vitest run",
     "lint": "eslint src/ eslint.config.mjs",
     "check": "tsc",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsx src/main.ts",
-    "dev:node": "node src/main.ts"
+    "dev": "node src/main.ts",
+    "dev:tsx": "tsx src/main.ts"
   },
   "devDependencies": {
     "@snowyyd/eslint-config": "^2.2.6",
-    "@types/node": "^25.2.0",
+    "@types/node": "^25.2.3",
     "eslint": "^9.39.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.55.0",
+    "vitest": "^4.0.18"
   }
 }
