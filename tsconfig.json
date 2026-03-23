@@ -4,7 +4,6 @@
   "include": ["src", "tests", "eslint.config.mjs"],
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
     "outDir": "./dist",
 
     // Environment Settings
@@ -15,7 +14,6 @@
     "types": ["node"],
 
     // Modules
-    "noUncheckedSideEffectImports": true,
     "rewriteRelativeImportExtensions": true,
     "resolveJsonModule": true,
     "checkJs": true,
@@ -24,12 +22,10 @@
     "noEmit": true,
 
     // Interop Constraints
-    "esModuleInterop": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
 
     // Stricter Typechecking Options
-    "strict": true,
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
