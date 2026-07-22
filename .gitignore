@@ -4,10 +4,6 @@ node_modules/
 
 # temporal files
 dist/
+bin/
 *.tsbuildinfo
-
-# npm pack
 /*.tgz
-
-# secrets
-.env
