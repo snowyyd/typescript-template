@@ -81,6 +81,8 @@ export class PackageJsonGen
 			// https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0
 			.add('typescript', 'npm:@typescript/typescript6@^6.0.2', this.options.ts6compat)
 			.add('@typescript/native', 'npm:typescript@^7.0.2', this.options.ts6compat)
+			// ts6compat for bun (for some reason `typescript-eslint` fails while running `bun lint`, `pnpm lint` works fine)
+			.add('typescript', '^6.0.3', this.options.ts6compat && isBun)
 
 			.buildSorted();
 	}
