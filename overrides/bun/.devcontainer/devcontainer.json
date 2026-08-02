@@ -13,6 +13,7 @@
   // "forwardPorts": [],
 
   "containerEnv": {
+    "INSTALL_BUN": "1",
     "DO_NOT_TRACK": "1" // Bun telemetry
   },
 

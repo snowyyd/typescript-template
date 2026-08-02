@@ -12,6 +12,10 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
 
+  "containerEnv": {
+    "INSTALL_NODE": "1"
+  },
+
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand":"bash -i ./.devcontainer/postCreateCommand.sh",
 
