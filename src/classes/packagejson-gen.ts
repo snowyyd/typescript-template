@@ -66,12 +66,12 @@ export class PackageJsonGen
 
 		return new ObjectBuilder()
 			.add('@snowyyd/eslint-config', '^2.2.7')
-			.add('eslint', '^10.7.0')
+			.add('eslint', '^10.8.0')
 			.add('typescript-eslint', '^8.65.0')
 			.add('typescript', '^7.0.2')
 
 			// node specific
-			.add('@types/node', '^26.1.1', isNode)
+			.add('@types/node', '^26.1.2', isNode)
 			.add('tsx', '^4.23.1', isNode)
 
 			// bun specific
