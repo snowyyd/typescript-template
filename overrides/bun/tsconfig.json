@@ -1,0 +1,38 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  // https://bun.com/docs/typescript#suggested-compileroptions
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["src", "tests", "eslint.config.mjs"],
+  "compilerOptions": {
+    // File Layout
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig_modules
+    "target": "esnext",
+    "module": "preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "types": ["bun"],
+
+    // Modules
+    "rewriteRelativeImportExtensions": true,
+    "resolveJsonModule": true,
+    "checkJs": true,
+
+    // Emit
+    "noEmit": true,
+
+    // Interop Constraints
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    // Stricter Typechecking Options
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Completeness
+    "skipLibCheck": true
+  }
+}
