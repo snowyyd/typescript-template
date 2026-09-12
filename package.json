@@ -22,12 +22,12 @@
   },
   "devDependencies": {
     "@snowyyd/eslint-config": "^2.2.7",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.5.1",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "eslint": "^10.9.0",
-    "tsx": "^4.23.12",
+    "eslint": "^10.10.0",
+    "tsx": "^4.23.13",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.70.0"
   },
   "dependencies": {
     "@topcli/prompts": "^4.0.0",
