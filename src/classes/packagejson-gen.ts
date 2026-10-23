@@ -66,16 +66,16 @@ export class PackageJsonGen
 
 		return new ObjectBuilder()
 			.add('@snowyyd/eslint-config', '^2.2.7')
-			.add('eslint', '^10.10.0')
-			.add('typescript-eslint', '^8.70.0')
+			.add('eslint', '^10.13.0')
+			.add('typescript-eslint', '^8.72.0')
 			.add('typescript', '^7.0.2')
 
 			// node specific
-			.add('@types/node', '^26.5.1', isNode)
-			.add('tsx', '^4.23.13', isNode)
+			.add('@types/node', '^26.6.5', isNode)
+			.add('tsx', '^4.23.15', isNode)
 
 			// bun specific
-			.add('@types/bun', '^1.4.2', isBun)
+			.add('@types/bun', '^1.4.4', isBun)
 
 			// ts6 compat
 			// https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0
