@@ -40,7 +40,7 @@ if [ "${INSTALL_BUN:-0}" = "1" ]; then
   BUN_VERSION="${BUN_VERSION:-latest}"
   INSTALL_DIR="${BUN_INSTALL:-$HOME/.bun}"
   BIN_DIR="$INSTALL_DIR/bin"
-  BIN="$BIN_DIR/bun"
+  EXE="$BIN_DIR/bun"
 
   mkdir -p "$BIN_DIR"
 
@@ -50,11 +50,25 @@ if [ "${INSTALL_BUN:-0}" = "1" ]; then
     BUN_URI="https://github.com/oven-sh/bun/releases/download/$BUN_VERSION/bun-$BUN_TARGET.zip"
   fi
 
-  curl --fail --location --progress-bar --output "$BIN.zip" "$BUN_URI"
-  unzip -oqd "$BIN_DIR" "$BIN.zip"
-  mv "$BIN_DIR/bun-$BUN_TARGET/bun" "$BIN"
-  chmod +x "$BIN"
-  rm -rf "$BIN_DIR/bun-$BUN_TARGET" "$BIN.zip"
+  curl --fail --location --progress-bar --output "$EXE.zip" "$BUN_URI"
+  unzip -oqd "$BIN_DIR" "$EXE.zip"
+  mv "$BIN_DIR/bun-$BUN_TARGET/bun" "$EXE"
+  chmod +x "$EXE"
+  rm -rf "$BIN_DIR/bun-$BUN_TARGET" "$EXE.zip"
+
+  # Path & completions
+  export BUN_INSTALL="$INSTALL_DIR"
+  export PATH="$BIN_DIR:$PATH"
+
+  # Generate shell completions
+  IS_BUN_AUTO_UPDATE=true "$EXE" completions &>/dev/null || :
+
+  # $ PATH
+  if [ -f "$HOME/.bashrc" ] && ! grep -q "BUN_INSTALL" "$HOME/.bashrc"; then
+      echo -e '\n# bun' >> "$HOME/.bashrc"
+      echo "export BUN_INSTALL=\"\$HOME/.bun\"" >> "$HOME/.bashrc"
+      echo "export PATH=\"\$BUN_INSTALL/bin:\$PATH\"" >> "$HOME/.bashrc"
+  fi
 
   echo -e "${GREEN}Bun installation complete.${NC}"
 else
